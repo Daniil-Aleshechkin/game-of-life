@@ -3,16 +3,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --size: 10;
 }
 
 .red {
@@ -23,14 +27,17 @@ code {
 }
 .grid-box {
   display: grid;
-  grid-template-columns: repeat(10,auto);
+  grid-template-columns: repeat(var(--size), auto);
   grid-gap: 5px;
+  width: calc(var(--size) * 35px);
+  height: calc(var(--size) * 35px);
   padding: 5px;
   border: 5px blue solid;
 }
 .grid-item {
   width: 30px;
   height: 30px;
+  color: white;
 }
 #root {
   margin-top: 25vh;
